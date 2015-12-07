@@ -1,4 +1,4 @@
-var disqus_shortname="kompiajaib";
+var disqus_shortname="animepjm";
 var disqus_url = disqus_blogger_current_url;
 
 (function () {
