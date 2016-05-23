@@ -1,8 +1,6 @@
 // Find all YouTube videos
 var $allVideos = $("iframe[src^='//www.youtube.com']"),
-var $allVideos = $("iframe[src^='//player.vimeo.com'], iframe
-
-[src^='//www.youtube.com']"),
+var $allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com']"),
 var $allVideos = $("object, embed"),
 
     // The element that is fluid width
