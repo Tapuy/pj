@@ -2,7 +2,7 @@
 var ListBlogLink = window.location.hostname;
 var ListCount = 5;
 var TitleCount = 70;
-var ListLabel ="data:label.name";
+var ListLabel ="Curhat";
 //----------------------------Function Start
 function mbtlist(json) {
 document.write('<ul class="mbtlist">');
