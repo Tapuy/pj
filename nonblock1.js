@@ -5,7 +5,7 @@ $("body").bind('copy', function (e) {
 	var selection = window.getSelection();
 	
 	//if the selection is short let's not our users
-    		if ($(".tr_bq").bind("" + selection).length < 2) return;
+    		if ($('.tr_bq').attr("disabled") == false;)
 
 
 
