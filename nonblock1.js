@@ -5,7 +5,8 @@ $("body").bind('copy', function (e) {
 	var selection = window.getSelection();
 	
 	//if the selection is short let's not annoy our users
-    	if ((".tr_bq" + selection).attr('disabled', true)) return;
+    		if ((".tr_bq" + selection).length < 2) return;
+
 
 
 	//create a div outside of the visible area
