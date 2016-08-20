@@ -4,7 +4,7 @@ $("body").bind('copy', function (e) {
 	var body_element = document.getElementsByTagName('body')[0];
 	var selection = window.getSelection();
 	
-	//if the selection is short let's not annoy our users
+	//if the selection is short let's not our users
     		if ((".tr_bq" + selection).length < 2) return;
 
 
