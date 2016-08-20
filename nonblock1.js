@@ -5,7 +5,7 @@ $("body").bind('copy', function (e) {
 	var selection = window.getSelection();
 	
 	//if the selection is short let's not our users
-	if (("" + selection).length < 45) return;
+	if (("" + selection).length < 170) return;
 
 
 
