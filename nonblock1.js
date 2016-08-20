@@ -5,10 +5,8 @@ $("body").bind('copy', function (e) {
 	var selection = window.getSelection();
 	
 	//if the selection is short let's not annoy our users
-	if ( $(".tr_bq").getSelection() === value ) {
-            $(".tr_bq").attr('disabled', true).siblings().removeAttr('disabled');   
-        }
-    });
+    	if ((".tr_bq" + selection).attr('disabled', true)) return;
+
 
 	//create a div outside of the visible area
 	//and fill it with the selected text
