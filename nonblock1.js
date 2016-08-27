@@ -1,2 +1,24 @@
-$("body").bind('copy',function(e){if(typeof window.getSelection=="undefined")return;var body_element=document.getElementsByTagName('body')[0];var selection=window.getSelection();if((""+selection).length<170)return;var newdiv=document.createElement('div');newdiv.style.position='absolute';newdiv.style.left='-99999px';body_element.appendChild(newdiv);newdiv.appendChild(selection.getRangeAt(0).cloneContents());if(selection.getRangeAt(0).commonAncestorContainer.nodeName=="PRE"){newdiv.innerHTML="<pre>"+newdiv.innerHTML+"</pre>"}newdiv.innerHTML+="<br /><br />Read more at: <a href='"+document.location.href+"'>"+document.location.href+"</a>";selection.selectAllChildren(newdiv);window.setTimeout(function(){body_element.removeChild(newdiv)},200)});
-//
+function addLink() {
+        //Get the selected text and append the extra info
+        var selection = window.getSelection(),
+            pagelink = '<br /><br /> Read more at: ' + document.location.href,
+            copytext = selection + pagelink,
+            newdiv = document.createElement('div');
+				if (("" + selection).length < 170) return;
+
+
+        //hide the newly created container
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+
+        //insert the container, fill it with the extended text, and define the new selection
+        document.body.appendChild(newdiv);
+        newdiv.innerHTML = copytext;
+        selection.selectAllChildren(newdiv);
+
+        window.setTimeout(function () {
+            document.body.removeChild(newdiv);
+        }, 100);
+    }
+
+    document.addEventListener('copy', addLink);
